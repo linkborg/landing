@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 
 export default function Page({ params }: PageProps) {
   try {
-    const { content, title } = getPageData(params.slug)
+    const { content, title } = getPageData(params.slug) as any
 
     return (
       <div className="min-h-screen bg-white dark:bg-gray-950">
